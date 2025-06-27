@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshield Solutions</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Freshield Solutions</div>
+              <img src="{{ url_for('static', filename='images/freshield_svg_logo.svg') }}" alt="Freshield Logo" class="logo">
+            <span class="Freshield Solutions"></span> 
+            <!-- <a href="{{url_for('home')}}" style="color: #66bb6a; text-decoration: none;">Freshield Solutions</a> -->
+            
+            <ul class="nav-links">
+              <li><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
+              <li><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
+              <li><a class="nav-link" href="{{ url_for('products') }}">Products</a></li>
+              <li><a class="nav-link" href="{{ url_for('contact') }}">Contact</a></li>
+              <li><a class="nav-link" href="{{ url_for('login') }}">LogIn</a></li>
+              <li><a class="nav-link" href="{{ url_for('signup') }}">SignUp</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <img src="{{ url_for('static', filename='images/freshield_svg_logo.svg') }}" alt="Freshield Logo" style="width:180px;">
+            <h1>Welcome to Freshield Solutions</h1>
+            <p>Premium Cleaning Solutions for a Healthier Tomorrow</p>
+            <a href="{{ url_for('products') }}" class="btn">Explore Products</a>
+        </div>
+        
+        <div class="container">
+            <div class="cards">
+                <div class="card">
+                    <h3>🧽 Premium Quality</h3>
+                    <p>Our phenyl products are manufactured using the finest ingredients and cutting-edge technology to ensure superior cleaning performance and long-lasting freshness.</p>
+                </div>
+                <div class="card">
+                    <h3>🌿 Eco-Friendly</h3>
+                    <p>We are committed to environmental sustainability. Our products are biodegradable and formulated to minimize impact on the environment while maximizing cleaning effectiveness.</p>
+                </div>
+                <div class="card">
+                    <h3>🏠 Multi-Purpose</h3>
+                    <p>Perfect for homes, offices, hospitals, and industrial spaces. Our versatile cleaning solutions adapt to any cleaning challenge you face.</p>
+                </div>
+                <div class="card">
+                    <h3>💪 Powerful Formula</h3>
+                    <p>Advanced antimicrobial properties ensure complete elimination of germs and bacteria, providing a safe and hygienic environment for your family and workplace.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                <a class="nav-link" href="{{ url_for('products') }}">Products</a>
+                <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                <a class="nav-link" href="{{ url_for('login') }}">LogIn</a>
+                <a class="nav-link" href="{{ url_for('signup') }}">SignUp</a>
+
+            </div>
+            <p>&copy; 2025 Freshield. All rights reserved. | Committed to Clean, Committed to Green</p>
+        </div>
+    </footer>
+</body>
+</html>

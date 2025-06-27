@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Freshield</title>
+     <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Freshield Solutions</div>
+            <img src="{{ url_for('static', filename='images/freshield_svg_logo.svg') }}" alt="Freshield Logo" class="logo">
+            <span class="Freshield Solutions"></span> 
+            <ul class="nav-links">
+                <li><a href="{{url_for('home')}}">Home</a></li>
+                <li><a href="{{url_for('about')}}">About</a></li>
+                <li><a href="{{url_for('products')}}">Products</a></li>
+                <li><a href="{{url_for('contact')}}">Contact</a></li>
+                <li><a href="{{url_for('login')}}">LogIn</a></li>
+                <li><a href="{{url_for('signup')}}">SignUp</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="section-title">About Freshield</h2>
+            
+            <div class="about-content">
+                <p>Founded with a vision to revolutionize the cleaning industry, Freshield has been at the forefront of innovation in phenyl and disinfectant manufacturing for over a decade. Our commitment to quality, sustainability, and customer satisfaction has made us a trusted name in cleaning solutions across the region.</p>
+                
+                <p>We believe that a clean environment is fundamental to health and well-being. That's why we invest heavily in research and development to create products that not only clean effectively but also protect the environment and promote healthier living spaces.</p>
+                
+                <p>Our state-of-the-art manufacturing facility employs advanced quality control measures and follows strict environmental guidelines. Every product that leaves our factory meets the highest standards of quality and safety.</p>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Products</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Quality Assured</div>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>🎯 Our Mission</h3>
+                    <p>To provide innovative, eco-friendly cleaning solutions that promote health, hygiene, and environmental sustainability while exceeding customer expectations.</p>
+                </div>
+                <div class="card">
+                    <h3>👁️ Our Vision</h3>
+                    <p>To become the leading manufacturer of premium cleaning products, recognized globally for quality, innovation, and environmental responsibility.</p>
+                </div>
+                <div class="card">
+                    <h3>⭐ Our Values</h3>
+                    <p>Quality, Sustainability, Innovation, Customer Satisfaction, Environmental Responsibility, and Continuous Improvement in everything we do.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+               <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+               <a class="nav-link" href="{{ url_for('about') }}">About</a>
+               <a class="nav-link" href="{{ url_for('products') }}">Products</a>
+               <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+               <a class="nav-link" href="{{ url_for('login') }}">LogIn</a>
+               <a class="nav-link" href="{{ url_for('signup') }}">SignUp</a>
+            </div>
+            <p>&copy; 2025 Freshield. All rights reserved. | Committed to Clean, Committed to Green</p>
+        </div>
+    </footer>
+</body>
+</html>

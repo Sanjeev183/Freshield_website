@@ -1,0 +1,44 @@
+<svg viewBox="0 0 350 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Main warrior shield gradient -->
+    <linearGradient id="warriorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d4d0d;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#1a5f1a;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#228B22;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#32CD32;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3cb371;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Border gradient -->
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#32CD32;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main warrior shield body - classic medieval shape -->
+  <path fill="url(#warriorGradient)" d="M175 27 C175 27, 42 50, 42 150 C42 217, 87 283, 175 373 C263 283, 308 217, 308 150 C308 50, 175 27, 175 27 Z"/>
+  
+  <!-- Shield border -->
+  <path fill="none" stroke="url(#borderGradient)" stroke-width="10" opacity="0.8" d="M175 40 C175 40, 63 60, 63 150 C63 207, 98 267, 175 347 C252 267, 287 207, 287 150 C287 60, 175 40, 175 40 Z"/>
+  
+  <!-- Inner shield detail -->
+  <path fill="#ffffff" opacity="0.2" d="M175 67 C175 67, 98 83, 98 150 C98 193, 122 240, 175 300 C228 240, 252 193, 252 150 C252 83, 175 67, 175 67 Z"/>
+  
+  <!-- Warrior cross emblem -->
+  <path fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" d="M175 83 L175 117 M158 100 L192 100"/>
+  
+  <!-- Decorative warrior elements -->
+  <path fill="#32CD32" opacity="0.7" d="M122 83 L140 67 L158 83 L140 100 Z"/>
+  <path fill="#32CD32" opacity="0.7" d="M227 83 L210 67 L192 83 L210 100 Z"/>
+  <path fill="#32CD32" opacity="0.7" d="M105 250 L122 233 L140 250 L122 267 Z"/>
+  <path fill="#32CD32" opacity="0.7" d="M245 250 L227 233 L210 250 L227 267 Z"/>
+  
+  <!-- Bottom warrior spike -->
+  <path fill="#32CD32" opacity="0.7" d="M168 350 L175 367 L182 350 Z"/>
+  
+  <!-- Company Text -->
+  <text x="175" y="180" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="900" letter-spacing="3" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.4);">FRESHIELD</text>
+  <text x="175" y="220" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="4" opacity="0.95" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.4);">SOLUTIONS</text>
+</svg>
