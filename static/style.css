@@ -27,23 +27,34 @@ overflow-x: hidden;
     .container {
         padding: 1.5rem 1%; /* Reduced padding for very narrow screens */
     }
+    .hero{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    h1{
+        font-size: clamp(0.8rem, 5.5vw, 2.2rem);
+    }
 }
-
+@media (max-width: 768px){
+    .hero{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 h1 {
-    font-size: clamp(0.9rem, 9vw, 3rem); /* Increased min font size, adjusted vw for better mobile fit */
+    font-size: clamp(0.9rem, 7vw, 3rem); 
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    line-height: 1.2; /* Add line-height for better readability if text wraps */
+    line-height: 1.3; /* Add line-height for better readability if text wraps */
     overflow-wrap: break-word;
      word-break: break-word; 
      color: white;
      margin-top: 20px;
      margin-bottom: 20px;
 }
-@media (max-width: 400px){
-    h1{
-        font-size: clamp(0.9rem, 10vw, 2.5rem);
-    }
 }
+
 
 /* Header */
 header {
@@ -141,7 +152,7 @@ background: linear-gradient(135deg, rgba(46, 125, 50, 0.9), rgba(27, 94, 32, 0.9
 background-size: cover;
 color: white;
 text-align: center;
-padding: 6rem 2rem;
+padding: 6rem 1rem;
 margin-bottom: 3rem;
 position: relative;
 overflow: hidden;
