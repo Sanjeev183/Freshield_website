@@ -37,13 +37,6 @@ h1 {
     /* word-break: break-word; /* Can keep this as a fallback if desired */ */
 }
 
-/* Add a media query for very small screens if 8vw is still too large */
-@media (max-width: 400px) { /* Adjust this breakpoint as needed */
-    h1 {
-        font-size: clamp(1.8rem, 9vw, 3rem); /* Slightly larger vw for tiny screens */
-    }
-}
-
 /* Header */
 header {
 background: linear-gradient(135deg, #2c5530 0%, #1e3a21 100%);
