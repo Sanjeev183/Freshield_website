@@ -16,7 +16,7 @@ overflow-x: hidden;
 .container {
     max-width: 100%;
     width: 100%; /* Keep this, but max-width: 100% is more critical */
-    padding: 2rem 5%; /* Use percentage-based padding for sides */
+    padding: 2rem 2%; /* Use percentage-based padding for sides */
     margin: 0 auto;
     box-sizing: border-box;
     animation: slideInFromBottom 0.8s ease-out;
@@ -25,16 +25,24 @@ overflow-x: hidden;
 /* You might want to adjust padding more aggressively for smaller screens */
 @media (max-width: 480px) {
     .container {
-        padding: 1.5rem 3%; /* Reduced padding for very narrow screens */
+        padding: 1.5rem 1%; /* Reduced padding for very narrow screens */
     }
 }
 
 h1 {
-    font-size: clamp(2rem, 8vw, 4rem); /* Increased min font size, adjusted vw for better mobile fit */
+    font-size: clamp(0.9rem, 9vw, 3rem); /* Increased min font size, adjusted vw for better mobile fit */
     text-align: center;
     line-height: 1.2; /* Add line-height for better readability if text wraps */
-    overflow-wrap: break-word; /* Prefer this over word-break for general usage */
-    /* word-break: break-word; /* Can keep this as a fallback if desired */ */
+    overflow-wrap: break-word;
+     word-break: break-word; 
+     color: white;
+     margin-top: 20px;
+     margin-bottom: 20px;
+}
+@media (max-width: 400px){
+    h1{
+        font-size: clamp(0.9rem, 10vw, 2.5rem);
+    }
 }
 
 /* Header */
