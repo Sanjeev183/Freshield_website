@@ -1,51 +1,101 @@
 /* Reset and Base Styles */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-font-family: 'Arial', sans-serif;
-line-height: 1.6;
-color: #333;
-background: linear-gradient(135deg, #f0f8f0 0%, #e8f5e8 100%);
-min-height: 100vh;
-overflow-x: hidden;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #f0f8f0 0%, #e8f5e8 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
+/* Container Styling */
 .container {
-    max-width: 1200px;
-    width: 100%; /* Keep this, but max-width: 100% is more critical */
-    padding: 2rem 2%; /* Use percentage-based padding for sides */
-    margin: 0 auto;
-    text-align: center;
-    box-sizing: border-box;
-    animation: slideInFromBottom 0.8s ease-out;
+  max-width: 1200px;
+  width: 100%;
+  padding-inline: 1rem;          /* Safe horizontal padding */
+  padding-block: 2rem;           /* Top and bottom padding */
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
 }
 
+/* Heading Animation */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Heading Styling */
 .container h1 {
-    font-size: clamp(1.5rem, 5vw, 3rem);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
-    margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  animation: slideInFromLeft 0.8s ease-out;
 }
+
+/* Paragraph under heading (optional) */
+.container p {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+/* Button Styling */
+.container button,
+.container .button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive: Tablets */
 @media (max-width: 768px) {
-    .container {
-        padding: 1.5rem;
-    }
-    .container h1 {
-        font-size: 2rem;
-    }
+  .container {
+    padding-inline: 1rem;
+    padding-block: 1.5rem;
+  }
+
+  .container h1 {
+    font-size: 2rem;
+  }
 }
+
+/* Responsive: Phones */
 @media (max-width: 480px) {
-    .container {
-        padding: 1rem;
-        margin: 0 10px;
-    }
-    .container h1 {
-        font-size: 1.5rem;
-    }
+  .container {
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    margin: 0 10px;
+  }
+
+  .container h1 {
+    font-size: 1.5rem;
+  }
 }
 /* @media (max-width: 480px) {
     .container {
