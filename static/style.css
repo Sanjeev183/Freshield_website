@@ -14,18 +14,42 @@ overflow-x: hidden;
 }
 
 .container {
-    max-width: 100%;
+    max-width: 1200px;
     width: 100%; /* Keep this, but max-width: 100% is more critical */
     padding: 2rem 2%; /* Use percentage-based padding for sides */
     margin: 0 auto;
+    text-align: center;
     box-sizing: border-box;
     animation: slideInFromBottom 0.8s ease-out;
 }
 
-/* You might want to adjust padding more aggressively for smaller screens */
+.container h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+    .container h1 {
+        font-size: 2rem;
+    }
+}
 @media (max-width: 480px) {
     .container {
-        padding: 1.5rem 1%; /* Reduced padding for very narrow screens */
+        padding: 1rem;
+        margin: 0 10px;
+    }
+    .container h1 {
+        font-size: 1.5rem;
+    }
+}
+/* @media (max-width: 480px) {
+    .container {
+        padding: 1.5rem 1%; 
     }
     .hero{
         padding-left: 0.5rem;
@@ -39,7 +63,7 @@ overflow-x: hidden;
     .hero{
         padding-left: 1rem;
         padding-right: 1rem;
-    }
+    } */
 h1 {
     font-size: clamp(0.9rem, 7vw, 3rem); 
     width: 90%;
@@ -53,7 +77,7 @@ h1 {
      margin-top: 20px;
      margin-bottom: 20px;
 }
-}
+
 
 
 /* Header */
