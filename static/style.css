@@ -90,11 +90,14 @@ body {
   .container {
     padding-inline: 1rem;
     padding-block: 1rem;
-    margin: 0 10px;
+    /* margin: 0 10px; */
   }
 
   .container h1 {
     font-size: 1.5rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
   }
 }
 /* @media (max-width: 480px) {
@@ -229,7 +232,8 @@ text-align: center;
 padding: 6rem 1rem;
 margin-bottom: 3rem;
 position: relative;
-overflow: hidden;
+overflow-x: hidden;
+overflow-y: visible;
 animation: heroSlideIn 1.2s ease-out;
 }
 .hero::before {
@@ -1372,4 +1376,21 @@ animation-duration: 0.01ms !important;
 animation-iteration-count: 1 !important;
 transition-duration: 0.01ms !important;
 }
+}
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 1rem;       /* Reduce padding on phones */
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;        /* Adjust heading size */
+    word-break: break-word;   /* Break long words like "Freshield" */
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
 }
