@@ -25,16 +25,19 @@ def signup():
             return redirect(url_for("home"))
     return render_template("signup.html", form=form)
 
-
-@app.route("/login", methods = ['GET','POST'])
+@app.route("/login", methods=['GET', 'POST'])
 def login():
     form = loginForm()
-    email = form.email.data
-    pw = form.password.data
     if form.validate_on_submit():
-       if email == "sanjeevnayak8260@gmail.com" and pw == "123456":
-        flash("Logged in successfully !!!")
-        return redirect(url_for("home"))
+        email = form.email.data
+        pw = form.password.data
+        if email == "sanjeevnayak8260@gmail.com" and pw == "123456":
+            flash("Logged in successfully !!!", "success")
+            return redirect(url_for("home"))
+        else:
+            flash("Invalid credentials", "danger")
+    return render_template("login.html", title="Login", form=form)
+
        
 
     return render_template("login.html",title = "Login",form=form)
