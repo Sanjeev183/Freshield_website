@@ -1,8 +1,10 @@
+import os
 from flask import Flask, render_template, request, redirect,flash,make_response,session, abort, url_for
 from forms import signupForm,loginForm,ChangePasswordForm
 
+
 app = Flask(__name__)
-app.secret_key = 'freshield@123'
+app.secret_key = os.environ.get("SECRET_KEY", "freshield@123")
 
 
 @app.route('/')
